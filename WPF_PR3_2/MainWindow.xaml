@@ -1,0 +1,64 @@
+﻿<Window x:Class="WPF_PR3_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_PR3_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu Background="White" BorderBrush="Navy" BorderThickness="1">
+            <MenuItem 
+                Header="_Цвет кисти">
+                <MenuItem 
+                    Header="_Красный" 
+                    Click="MenuItemRed_Click" />
+                <MenuItem 
+                    Header="_Синий" 
+                    Click="MenuItemBlue_Click" />
+                <MenuItem 
+                    Header="_Зелёный" 
+                    Click="MenuItemGreen_Click" />
+                <MenuItem 
+                    Header="_Закрыть" 
+                    Click="ExitMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem
+                Header ="Режим рисования">
+                <MenuItem
+                    Header="Рисование"
+                    Click="MenuItemDraw"/>
+                <MenuItem
+                    Header="Редактирование"
+                    Click="MenuItemRedact"/>
+                <MenuItem
+                    Header="Удаление"
+                    Click="MenuItemDelete"/>
+            </MenuItem>
+            <MenuItem 
+                Header="_О программе" 
+                Click="AboutProgram_Click"/>
+            
+
+        </Menu>
+        <Label Content="Размер кисти" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="26" Width="92" FontFamily="Comic Sans MS"/>
+        <Button Content="Малый" Width="90" Height="40" Margin="100,-160,0,170" HorizontalAlignment="Left" Click="Button_Click"/>
+        <Button Content="Средний" Width="90" Height="40" Margin="200,-160,0,170" HorizontalAlignment="Left" Click="Button_Click_1"/>
+        <Button Content="Большой" Width="90" Height="40" Margin="300,-160,0,170" HorizontalAlignment="Left" Click="Button_Click_2"/>
+        <Button Content="Огромный" Width="90" Height="40" Margin="400,-160,0,170" HorizontalAlignment="Left" Click="Button_Click_3"/>
+        <Button Content="Гигантсикй" Width="90" Height="40" Margin="500,-160,0,170" HorizontalAlignment="Left" Click="Button_Click_4"/>
+        <Button Content="УЛЬТРА" Width="90" Height="40" Margin="600,-160,0,170" HorizontalAlignment="Left" Click="Button_Click_5"/>
+        <InkCanvas 
+            Name="MainInk"
+            Margin="0,73,0,0">
+            <InkCanvas.DefaultDrawingAttributes>
+                <DrawingAttributes
+                    x:Name="def"
+                    Color="Red" 
+                    Height="10" 
+                    Width="10"/>
+            </InkCanvas.DefaultDrawingAttributes>
+        </InkCanvas>
+        
+    </Grid>
+</Window>

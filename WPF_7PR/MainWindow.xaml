@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPF_7PR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_7PR"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <WrapPanel>
+            <Viewbox Width="350">
+                <Image Source="1.png" Height="80" HorizontalAlignment="Left" Name="IMG"/>
+            </Viewbox>
+            <Label Content="x" VerticalAlignment="Center"/>
+            <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="xTextBox"/>
+            <Label Content="N" VerticalAlignment="Center"/>
+            <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="NTextBox"/>
+            <Label Content="K" VerticalAlignment="Center"/>
+            <TextBox Text="0,00" Width="70" VerticalAlignment="Center" Name="KTextBox"/>
+        </WrapPanel>
+        <Label Content="Ответ:" Width="90" Height="50" HorizontalAlignment="Left" FontSize="26"/>
+        <Label Content="Z" Width="600" Height="50"  HorizontalAlignment="Left" FontSize="26" Margin="100,-47,0,0" Name="Z"/>
+        <Button Content="Вычислить ответ" Width="700" Height="40" VerticalAlignment="Bottom" Click="Button_Click" Margin="46,0,0,0" HorizontalAlignment="Left"/>
+    </StackPanel>
+</Window>

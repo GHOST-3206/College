@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPF_5PR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_5PR"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450">
+    <Grid Grid.IsSharedSizeScope="True" Margin="3">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" ShowGridLines="True" Margin="3" Background="LightYellow">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="TextLabel" />
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Margin="5" Content="очень длинный кусочек текста"/>
+            <Label Grid.Column="1" Margin="5" Content="текст номер 1"/>
+            <TextBox Grid.Column="2" Margin="5">текст коробка</TextBox>
+        </Grid>
+        <Label Grid.Row="1">Текст тут тоже он</Label>
+        <Grid Grid.Row="2" Margin="3" Background="LightBlue" ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="TextLabel" />
+                <ColumnDefinition />
+                
+            </Grid.ColumnDefinitions>
+            <Label Margin="5" Grid.RowSpan="2">Коротко</Label>
+            <TextBox Grid.Column="1" Margin="5" Grid.RowSpan="2">И снова текст коробка</TextBox>
+        </Grid>
+    </Grid>
+</Window>
